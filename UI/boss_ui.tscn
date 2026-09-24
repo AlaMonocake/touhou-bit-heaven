@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://b7u3ccaerqys3"]
+
+[ext_resource type="Script" uid="uid://c1yqvvqb0x48n" path="res://UI/boss_ui.gd" id="1_f5yoo"]
+[ext_resource type="Texture2D" uid="uid://dyt41lav4bnb" path="res://UI/background_bar.png" id="1_of4dr"]
+[ext_resource type="Texture2D" uid="uid://cedbm5ehgaa1s" path="res://UI/fillBar.png" id="2_of4dr"]
+[ext_resource type="Script" uid="uid://cw3xq484uxcnc" path="res://UI/phase_stars.gd" id="4_c05ru"]
+[ext_resource type="FontFile" uid="uid://c32q3xvkv6xve" path="res://Fonts/OpenDyslexicMono-Regular.otf" id="4_lxpph"]
+[ext_resource type="Texture2D" uid="uid://7uldhocp1ara" path="res://UI/star.png" id="4_xl7i3"]
+[ext_resource type="Script" uid="uid://cpjj645i44teg" path="res://UI/spell_timer.gd" id="6_slfno"]
+[ext_resource type="PackedScene" uid="uid://4id5xsgnpwgw" path="res://UI/spellCardPortrait.tscn" id="7_tushc"]
+[ext_resource type="Script" uid="uid://df22nfxv71a3t" path="res://UI/spell_name.gd" id="8_68mtg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_15xpw"]
+font = ExtResource("4_lxpph")
+font_size = 18
+
+[node name="TextureProgressBar" type="TextureProgressBar" unique_id=1263760551]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1493.0
+offset_top = -1542.0
+offset_right = 1493.0
+offset_bottom = 1542.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.23, 1.23)
+texture_under = ExtResource("1_of4dr")
+texture_progress = ExtResource("2_of4dr")
+tint_progress = Color(0.7557292, 0.18367329, 0.32238752, 1)
+script = ExtResource("1_f5yoo")
+
+[node name="Label2" type="Label" parent="." unique_id=1604115581]
+layout_mode = 0
+offset_left = 2.4390426
+offset_top = -26.016249
+offset_right = 82.43904
+offset_bottom = 5.9837513
+text = "BLANCA"
+label_settings = SubResource("LabelSettings_15xpw")
+
+[node name="PhaseStars" type="HBoxContainer" parent="." unique_id=1995290475]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 16.0
+offset_right = 47.0
+offset_bottom = 56.0
+scale = Vector2(0.4, 0.4)
+script = ExtResource("4_c05ru")
+
+[node name="Star" type="Sprite2D" parent="PhaseStars" unique_id=1236087370]
+texture = ExtResource("4_xl7i3")
+
+[node name="Star2" type="Sprite2D" parent="PhaseStars" unique_id=1891176168]
+position = Vector2(46.666668, 0)
+texture = ExtResource("4_xl7i3")
+
+[node name="Star3" type="Sprite2D" parent="PhaseStars" unique_id=1399773866]
+position = Vector2(93.333336, 0)
+texture = ExtResource("4_xl7i3")
+
+[node name="Star4" type="Sprite2D" parent="PhaseStars" unique_id=1119049587]
+position = Vector2(140, 0)
+texture = ExtResource("4_xl7i3")
+
+[node name="Star5" type="Sprite2D" parent="PhaseStars" unique_id=545243245]
+position = Vector2(186.66666, 0)
+texture = ExtResource("4_xl7i3")
+
+[node name="Star6" type="Sprite2D" parent="PhaseStars" unique_id=347561054]
+position = Vector2(233.33333, 0)
+texture = ExtResource("4_xl7i3")
+
+[node name="Star7" type="Sprite2D" parent="PhaseStars" unique_id=789264238]
+position = Vector2(280, 0)
+texture = ExtResource("4_xl7i3")
+
+[node name="SpellTimer" type="Label" parent="." unique_id=407984775]
+layout_mode = 0
+offset_left = 465.85364
+offset_top = 11.382114
+offset_right = 505.8536
+offset_bottom = 29.382114
+text = "00"
+script = ExtResource("6_slfno")
+
+[node name="SpellPortrait" parent="." unique_id=908369242 instance=ExtResource("7_tushc")]
+layout_mode = 1
+offset_top = 220.0
+offset_bottom = 220.0
+
+[node name="SpellName" type="Label" parent="." unique_id=1194963166]
+layout_mode = 0
+offset_left = 200.0
+offset_top = -11.0
+offset_right = 500.00006
+offset_bottom = 33.0
+text = "Emotional skyscraper ~ Cosmic mind longer test
+"
+horizontal_alignment = 2
+script = ExtResource("8_68mtg")

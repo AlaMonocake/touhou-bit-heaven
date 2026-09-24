@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://370b7sdnpuy4"]
+
+[ext_resource type="Texture2D" uid="uid://bpbc8ofdm5aly" path="res://Backgrounds/uibgTrans.png" id="1_07qun"]
+[ext_resource type="PackedScene" uid="uid://4c1rm5e3u8sb" path="res://stage_1.tscn" id="1_nqqib"]
+[ext_resource type="Script" uid="uid://w4n1ux56tfqe" path="res://node_2d(main).gd" id="1_xl1q1"]
+[ext_resource type="PackedScene" uid="uid://cdetve1r1ap81" path="res://UI/game_over.tscn" id="2_o2noa"]
+[ext_resource type="PackedScene" uid="uid://qnt6jbo586gw" path="res://pause_menu.tscn" id="3_eb4pw"]
+[ext_resource type="PackedScene" uid="uid://c4qh2flxqo4oo" path="res://player.tscn" id="5_mg064"]
+[ext_resource type="PackedScene" uid="uid://cds2ufa4iluph" path="res://UI/dialogue_box.tscn" id="6_8su0f"]
+[ext_resource type="PackedScene" uid="uid://ch3rh1k86lcid" path="res://UI/bombs_ui.tscn" id="6_o2noa"]
+[ext_resource type="PackedScene" uid="uid://dr81v424qqdby" path="res://UI/life_up.tscn" id="7_dq6hd"]
+[ext_resource type="PackedScene" uid="uid://b48f3x5tosour" path="res://UI/hearts_ui.tscn" id="7_omlup"]
+[ext_resource type="Texture2D" uid="uid://dwu6fwyyf2e61" path="res://Buttons/gameover_fog.png" id="8_omlup"]
+[ext_resource type="Texture2D" uid="uid://b1phpyvxb1pu1" path="res://UI/bombItem.png" id="9_18rv7"]
+[ext_resource type="PackedScene" uid="uid://b7u3ccaerqys3" path="res://UI/boss_ui.tscn" id="9_hxytk"]
+[ext_resource type="PackedScene" uid="uid://ddnlvsrkwna1k" path="res://UI/bgm.tscn" id="10_hxytk"]
+[ext_resource type="PackedScene" uid="uid://bqag4f55fm078" path="res://power_ui.tscn" id="13_eq82r"]
+[ext_resource type="PackedScene" uid="uid://comjll24lfb8q" path="res://boss_indicator.tscn" id="15_hdwll"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eq82r"]
+font_size = 20
+
+[node name="Node2D(Main)" type="Control" unique_id=378189137]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = 475.0
+offset_top = 33.0
+offset_right = 475.0
+offset_bottom = 33.0
+script = ExtResource("1_xl1q1")
+game_over_scene = ExtResource("2_o2noa")
+pause_menu_scene = ExtResource("3_eb4pw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1169467015]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 41.0
+offset_right = 657.0
+offset_bottom = 871.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=130980859]
+handle_input_locally = false
+size = Vector2i(660, 830)
+render_target_update_mode = 4
+
+[node name="Stage1" parent="SubViewportContainer/SubViewport" unique_id=533808263 instance=ExtResource("1_nqqib")]
+process_mode = 1
+scale = Vector2(0.52, 0.52)
+
+[node name="DialogueBox" parent="SubViewportContainer/SubViewport/Stage1" unique_id=1926669242 instance=ExtResource("6_8su0f")]
+visible = false
+
+[node name="Player" parent="SubViewportContainer/SubViewport" unique_id=1474954432 instance=ExtResource("5_mg064")]
+position = Vector2(320, 605)
+
+[node name="PickupItem" parent="SubViewportContainer/SubViewport" unique_id=317732125 instance=ExtResource("7_dq6hd")]
+visible = false
+position = Vector2(631, 571)
+collision_layer = 1
+pickup_type = 1
+icon = ExtResource("9_18rv7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132048047]
+
+[node name="BossUI" parent="CanvasLayer" unique_id=1410795819 instance=ExtResource("9_hxytk")]
+offset_left = -291.0
+offset_top = -343.0
+offset_right = 2695.0
+offset_bottom = 2741.0
+
+[node name="BGM" parent="CanvasLayer" unique_id=309686638 instance=ExtResource("10_hxytk")]
+offset_left = 390.0
+offset_top = 566.50006
+offset_right = 390.0
+offset_bottom = 566.50006
+
+[node name="BombsUI" parent="CanvasLayer" unique_id=962633235 instance=ExtResource("6_o2noa")]
+offset_left = 1186.0
+offset_top = 322.0
+offset_right = 1726.0
+offset_bottom = 362.0
+scale = Vector2(0.505, 0.505)
+
+[node name="HeartsUI" parent="CanvasLayer" unique_id=2045556186 instance=ExtResource("7_omlup")]
+offset_left = 1198.0
+offset_top = 269.0
+offset_right = 1502.0
+offset_bottom = 309.0
+scale = Vector2(0.765, 0.765)
+
+[node name="PowerUI" parent="CanvasLayer" unique_id=1334410219 instance=ExtResource("13_eq82r")]
+offset_left = 399.0
+offset_top = -70.0
+offset_right = 399.0
+offset_bottom = -70.0
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=103466800]
+offset_left = 1192.9999
+offset_top = 124.99999
+offset_right = 1325.9999
+offset_bottom = 151.0
+scale = Vector2(2.805, 2.805)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "SCORE: 00000000"
+label_settings = SubResource("LabelSettings_eq82r")
+
+[node name="BossIndicator" parent="CanvasLayer" unique_id=875114847 instance=ExtResource("15_hdwll")]
+offset_left = 765.0
+offset_top = 861.0
+offset_right = 765.0
+offset_bottom = 861.0
+
+[node name="UI" type="TextureRect" parent="." unique_id=1287650300]
+z_index = 2
+layout_mode = 0
+offset_left = -474.0
+offset_top = -33.0
+offset_right = 1126.0
+offset_bottom = 867.0
+texture = ExtResource("1_07qun")
+
+[node name="DarkOverlay" type="TextureRect" parent="." unique_id=888675986]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 75.0
+offset_top = 45.0
+offset_right = 146.11111
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(20.415, 20.415)
+texture = ExtResource("8_omlup")
+expand_mode = 3
+
+[editable path="SubViewportContainer/SubViewport/Player"]

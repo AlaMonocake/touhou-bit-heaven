@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RotatingRingPattern" format=3 uid="uid://ctebjm6cr67n4"]
+
+[ext_resource type="Script" uid="uid://bakxuljhw1cdw" path="res://Patterns/rotating_ring.gd" id="1_cw4uu"]
+[ext_resource type="PackedScene" uid="uid://bw40jkebn73vy" path="res://Bullets/darkpinkenemybullet.tscn" id="1_nhctx"]
+
+[resource]
+script = ExtResource("1_cw4uu")
+bullet_scene = ExtResource("1_nhctx")
+bullet_count = 20
+cooldown = 0.8
+metadata/_custom_type_script = "uid://bakxuljhw1cdw"

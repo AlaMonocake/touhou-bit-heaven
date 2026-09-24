@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://jelljriw16uw"]
+
+[ext_resource type="Script" uid="uid://dd2ro60abp2ne" path="res://explosion.gd" id="1_1cbhc"]
+[ext_resource type="Texture2D" uid="uid://dxj8ji2bwvaor" path="res://Sprites/explosion/1_0.png" id="1_nnth5"]
+[ext_resource type="Texture2D" uid="uid://c4lfq1cw1yjk5" path="res://Sprites/explosion/1_5.png" id="2_1cbhc"]
+[ext_resource type="Texture2D" uid="uid://dt0un4sg2nreu" path="res://Sprites/explosion/1_6.png" id="3_iuruv"]
+[ext_resource type="Texture2D" uid="uid://b2ew4w40ui0tk" path="res://Sprites/explosion/1_7.png" id="4_b02un"]
+[ext_resource type="Texture2D" uid="uid://xq3kifdi3tej" path="res://Sprites/explosion/1_8.png" id="5_jttv8"]
+[ext_resource type="Texture2D" uid="uid://cehs5geaw3ok3" path="res://Sprites/explosion/1_9.png" id="6_36sm1"]
+[ext_resource type="Texture2D" uid="uid://uthnoniefagd" path="res://Sprites/explosion/1_10.png" id="7_0bpt1"]
+[ext_resource type="Texture2D" uid="uid://bp8hr802xbcm" path="res://Sprites/explosion/1_11.png" id="8_t2o8r"]
+[ext_resource type="Texture2D" uid="uid://bexuxxhe1kk07" path="res://Sprites/explosion/1_12.png" id="9_j2a3p"]
+[ext_resource type="Texture2D" uid="uid://dctxayopmlklw" path="res://Sprites/explosion/1_13.png" id="10_yxxag"]
+[ext_resource type="Texture2D" uid="uid://dwem2082k5dk8" path="res://Sprites/explosion/1_14.png" id="11_u1o5f"]
+[ext_resource type="Texture2D" uid="uid://bpdsqr87wafni" path="res://Sprites/explosion/1_15.png" id="12_ftknk"]
+[ext_resource type="Texture2D" uid="uid://dm0l4h6r7e1hi" path="res://Sprites/explosion/1_16.png" id="13_n8fa5"]
+[ext_resource type="Texture2D" uid="uid://b7tqesk6wgxpv" path="res://Sprites/explosion/1_17.png" id="14_vpfo1"]
+[ext_resource type="Texture2D" uid="uid://c787kxcfi8db0" path="res://Sprites/explosion/1_18.png" id="15_cwgg6"]
+[ext_resource type="Texture2D" uid="uid://ysuh4tcbplxq" path="res://Sprites/explosion/1_19.png" id="16_i7mfk"]
+[ext_resource type="Texture2D" uid="uid://bmyyqu7aigrog" path="res://Sprites/explosion/1_20.png" id="17_ame1v"]
+[ext_resource type="Texture2D" uid="uid://t0vkmaxujiyd" path="res://Sprites/explosion/1_30.png" id="18_sol3q"]
+[ext_resource type="Texture2D" uid="uid://boyaipalopwb3" path="res://Sprites/explosion/1_31.png" id="19_8ohjh"]
+[ext_resource type="Texture2D" uid="uid://dmemh4sxrk6eh" path="res://Sprites/explosion/1_32.png" id="20_rua2g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5npba"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nnth5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1cbhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iuruv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b02un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jttv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_36sm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0bpt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t2o8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j2a3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yxxag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u1o5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ftknk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n8fa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vpfo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cwgg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i7mfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ame1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sol3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8ohjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rua2g")
+}],
+"loop": 0,
+"name": &"explode",
+"speed": 15.0
+}]
+
+[node name="Explosion" type="Node2D" unique_id=293529107]
+script = ExtResource("1_1cbhc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2106442395]
+position = Vector2(-28, 0)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5npba")
+animation = &"explode"
+frame = 2
+frame_progress = 0.9177278

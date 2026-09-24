@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://4c1rm5e3u8sb"]
+
+[ext_resource type="Script" uid="uid://ejbsui34dsuq" path="res://Scripts/stage_1.gd" id="1_8tppg"]
+[ext_resource type="Texture2D" uid="uid://bmis542fl3na2" path="res://Backgrounds/sky.png" id="1_gdxjy"]
+[ext_resource type="Texture2D" uid="uid://b04xf6ygq5raf" path="res://Backgrounds/clouds.png" id="2_msyjq"]
+[ext_resource type="Script" uid="uid://dbl7ar8th1mp6" path="res://Scripts/parallax_2d(clouds).gd" id="2_yqlpp"]
+[ext_resource type="Resource" uid="uid://wniovp4yp67x" path="res://Scripts/stage1_intro.tres" id="4_xsjxg"]
+[ext_resource type="Script" uid="uid://chvxm3j5dcbw6" path="res://Scripts/wave_manager.gd" id="6_vq065"]
+[ext_resource type="Texture2D" uid="uid://coy82dtc877cc" path="res://Backgrounds/rotatedbombing.png" id="7_qysxt"]
+[ext_resource type="Resource" uid="uid://b4cjdv0ogikjy" path="res://stage1enemies.tres" id="10_vn1b6"]
+
+[node name="Stage1" type="Node2D" unique_id=207008454]
+script = ExtResource("1_8tppg")
+intro_dialogue = ExtResource("4_xsjxg")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1463235302]
+texture = ExtResource("1_gdxjy")
+centered = false
+
+[node name="Clouds" type="Parallax2D" parent="." unique_id=303737752]
+scroll_offset = Vector2(-146, 4)
+script = ExtResource("2_yqlpp")
+normal_texture = ExtResource("2_msyjq")
+bomb_texture = ExtResource("7_qysxt")
+
+[node name="Sprite1" type="Sprite2D" parent="Clouds" unique_id=2121333420]
+texture_repeat = 2
+texture = ExtResource("2_msyjq")
+centered = false
+region_rect = Rect2(93.98047, 338.1958, 1186.0195, 1569.0056)
+
+[node name="Sprite2" type="Sprite2D" parent="Clouds" unique_id=1961118064]
+texture_repeat = 2
+position = Vector2(0, -1780)
+texture = ExtResource("2_msyjq")
+centered = false
+region_rect = Rect2(93.98047, 338.1958, 1186.0195, 1569.0056)
+
+[node name="BombBackground" type="Sprite2D" parent="Clouds" unique_id=721674548]
+visible = false
+position = Vector2(791, 814)
+texture = ExtResource("7_qysxt")
+
+[node name="WaveManager" type="Node" parent="." unique_id=837016249]
+script = ExtResource("6_vq065")
+stage_data = ExtResource("10_vn1b6")

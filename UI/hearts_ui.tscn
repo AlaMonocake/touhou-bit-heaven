@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b48f3x5tosour"]
+
+[ext_resource type="Script" uid="uid://bha3jfko5tiwx" path="res://UI/hearts_ui.gd" id="1_3562j"]
+[ext_resource type="Texture2D" uid="uid://ctvn4um3lht25" path="res://UI/heart_empty.png" id="2_8t2sd"]
+[ext_resource type="Texture2D" uid="uid://gs2eijwn0ll0" path="res://UI/heart_full.png" id="2_pca1g"]
+
+[node name="HeartsUI" type="HBoxContainer" unique_id=2045556186]
+offset_right = 426.0
+offset_bottom = 40.0
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_3562j")
+heart_full = ExtResource("2_pca1g")
+heart_empty = ExtResource("2_8t2sd")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=434164182]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2104514520]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1735155940]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1639326406]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=989398080]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="." unique_id=703468290]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect7" type="TextureRect" parent="." unique_id=1362083921]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3
+
+[node name="TextureRect8" type="TextureRect" parent="." unique_id=652355295]
+layout_mode = 2
+texture = ExtResource("2_8t2sd")
+expand_mode = 3

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bec6lms6ngywe"]
+
+[ext_resource type="PackedScene" uid="uid://dq3jakopu523b" path="res://birdW.tscn" id="1_cp84p"]
+[ext_resource type="Texture2D" uid="uid://c554vdlvqr3t8" path="res://Enemies/brownbirb1.png" id="2_ojw31"]
+[ext_resource type="Texture2D" uid="uid://vruopla07soa" path="res://Enemies/brownbirb2.png" id="3_17pnb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyip3"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.7,
+"texture": ExtResource("2_ojw31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_17pnb")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 3.0
+}]
+
+[node name="Bird" unique_id=265608222 instance=ExtResource("1_cp84p")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=888231680]
+sprite_frames = SubResource("SpriteFrames_yyip3")
+frame_progress = 0.0

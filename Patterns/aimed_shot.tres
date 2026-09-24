@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AimedPattern" format=3 uid="uid://bambionfo0miq"]
+
+[ext_resource type="Script" uid="uid://cy3f8fwkmi4i2" path="res://Patterns/aimed_shot.gd" id="1_5gfk8"]
+[ext_resource type="PackedScene" uid="uid://cp5qofd48xplh" path="res://Bullets/EnemyBullets.tscn" id="1_oaio3"]
+
+[resource]
+script = ExtResource("1_5gfk8")
+bullet_scene = ExtResource("1_oaio3")
+speed = 100
+cooldown = 0.7
+metadata/_custom_type_script = "uid://cy3f8fwkmi4i2"

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cp5qofd48xplh"]
+
+[ext_resource type="Script" uid="uid://dle3sk7odb8fb" path="res://Scripts/enemy_bullet.gd" id="1_r5mwl"]
+[ext_resource type="Texture2D" uid="uid://r37jr23xgavj" path="res://Bullets/whitebulletv2.png" id="2_u1mm2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1mm2"]
+
+[node name="Area2D" type="Area2D" unique_id=312417383 groups=["enemy_bullet"]]
+collision_layer = 8
+script = ExtResource("1_r5mwl")
+
+[node name="enemy_bullet" type="CharacterBody2D" parent="." unique_id=1887594969 groups=["enemy_bullet"]]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_bullet" unique_id=1140361076]
+scale = Vector2(0.755, 0.755)
+shape = SubResource("CircleShape2D_u1mm2")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy_bullet" unique_id=1737902496]
+scale = Vector2(2, 2)
+texture = ExtResource("2_u1mm2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

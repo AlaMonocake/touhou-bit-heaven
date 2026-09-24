@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MoveStopAndGo" format=3 uid="uid://dhsyw7key176o"]
+
+[ext_resource type="Script" uid="uid://da3e5avil78lw" path="res://Scripts/movement_patterns/stopShootLeave.gd" id="1_ffw1s"]
+
+[resource]
+script = ExtResource("1_ffw1s")
+metadata/_custom_type_script = "uid://da3e5avil78lw"

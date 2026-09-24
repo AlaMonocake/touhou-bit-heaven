@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4fi8n7roiocv"]
+
+[ext_resource type="Script" uid="uid://dmtldh8kqvfhb" path="res://score_pop_up.gd" id="1_g3nof"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g3nof"]
+font_size = 25
+font_color = Color(0.84751654, 0.8438364, 0, 1)
+outline_size = 1
+
+[node name="ScorePopUp" type="Node2D" unique_id=130589248]
+script = ExtResource("1_g3nof")
+
+[node name="Label" type="Label" parent="." unique_id=2044179753]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "+"
+label_settings = SubResource("LabelSettings_g3nof")

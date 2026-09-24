@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EncircleShot" format=3 uid="uid://b7ewg2cd2iggo"]
+
+[ext_resource type="PackedScene" uid="uid://bw40jkebn73vy" path="res://Bullets/darkpinkenemybullet.tscn" id="1_24hh0"]
+[ext_resource type="Script" uid="uid://x0c02pmpypu7" path="res://Patterns/encircle.gd" id="1_j8yd0"]
+[ext_resource type="PackedScene" uid="uid://e7y6eq3gmgwi" path="res://Bullets/longpurpleenemybullet.tscn" id="3_ip6kp"]
+
+[resource]
+script = ExtResource("1_j8yd0")
+primary_bullet_scene = ExtResource("1_24hh0")
+secondary_bullet_scene = ExtResource("3_ip6kp")
+primary_bullet_count = 2
+secondary_bullet_count = 1
+cooldown = 0.4
+metadata/_custom_type_script = "uid://x0c02pmpypu7"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MoveWait" format=3 uid="uid://dauulul5d32j3"]
+
+[ext_resource type="Script" uid="uid://bx1ypye08tr8w" path="res://Scripts/movement_patterns/wait.gd" id="1_p6xit"]
+
+[resource]
+script = ExtResource("1_p6xit")
+metadata/_custom_type_script = "uid://bx1ypye08tr8w"

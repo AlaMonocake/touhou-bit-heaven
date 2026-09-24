@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BossPhase" format=3 uid="uid://vt42nm60t33g"]
+
+[ext_resource type="Script" uid="uid://bo28rorsqbkwb" path="res://Scripts/bossPhase.gd" id="1_41akr"]
+[ext_resource type="PackedScene" uid="uid://c3bpn0iw7wada" path="res://Bullets/redbullet.tscn" id="1_l3mra"]
+[ext_resource type="Script" uid="uid://cy3f8fwkmi4i2" path="res://Patterns/aimed_shot.gd" id="2_owxoi"]
+
+[sub_resource type="Resource" id="Resource_yder0"]
+script = ExtResource("2_owxoi")
+bullet_scene = ExtResource("1_l3mra")
+metadata/_custom_type_script = "uid://cy3f8fwkmi4i2"
+
+[resource]
+script = ExtResource("1_41akr")
+phase_name = "I like sweets"
+bullet_pattern = SubResource("Resource_yder0")
+metadata/_custom_type_script = "uid://bo28rorsqbkwb"

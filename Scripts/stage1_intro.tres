@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://wniovp4yp67x"]
+
+[ext_resource type="Script" uid="uid://7qw3fi5sd44q" path="res://Scripts/DialogueLine.gd" id="1_d1xnq"]
+[ext_resource type="Script" uid="uid://bijiqgpsciwbo" path="res://Scripts/DialogueData.gd" id="2_1f0k4"]
+[ext_resource type="Texture2D" uid="uid://b037mheqo1n1k" path="res://Portraits/mc_por1.png" id="2_ehgb4"]
+[ext_resource type="Texture2D" uid="uid://bewe30kq0o6l6" path="res://Portraits/boss1_port1.png" id="3_ehgb4"]
+
+[sub_resource type="Resource" id="Resource_ovn0s"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Lecia"
+text = "Hmm... I wonder if it's this way..."
+portrait = ExtResource("2_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_iyiil"]
+script = ExtResource("1_d1xnq")
+speaker_name = "???"
+text = "Hey! Are you going to heaven by any chance?"
+side = 1
+portrait = ExtResource("3_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_ehgb4"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Lecia"
+text = "What if I am?"
+portrait = ExtResource("2_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_sh6a1"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Blanca"
+text = "Take me along! I know the way! Name's Blanca by the way."
+side = 1
+portrait = ExtResource("3_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_y3qi7"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Lecia"
+text = "If you know how to get there what do you need me for?"
+portrait = ExtResource("2_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_fx0s7"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Blanca"
+text = "They don't let demons just fly in freely, you know?"
+side = 1
+portrait = ExtResource("3_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_555uf"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Lecia"
+text = "In that case I refuse."
+portrait = ExtResource("2_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_7echg"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Blanca"
+text = "What, why!? Oh fine, I'll just beat you and make you my minion."
+side = 1
+portrait = ExtResource("3_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[sub_resource type="Resource" id="Resource_wsgle"]
+script = ExtResource("1_d1xnq")
+speaker_name = "Lecia"
+text = "Bring it on!"
+portrait = ExtResource("2_ehgb4")
+metadata/_custom_type_script = "uid://7qw3fi5sd44q"
+
+[resource]
+script = ExtResource("2_1f0k4")
+lines = Array[ExtResource("1_d1xnq")]([SubResource("Resource_ovn0s"), SubResource("Resource_iyiil"), SubResource("Resource_ehgb4"), SubResource("Resource_sh6a1"), SubResource("Resource_y3qi7"), SubResource("Resource_fx0s7"), SubResource("Resource_555uf"), SubResource("Resource_7echg"), SubResource("Resource_wsgle")])
+metadata/_custom_type_script = "uid://bijiqgpsciwbo"

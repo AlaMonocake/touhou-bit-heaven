@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DanmakuRainFan" format=3 uid="uid://dtdwjgb21xfis"]
+
+[ext_resource type="PackedScene" uid="uid://brqf5enbuo83d" path="res://Bullets/greencandybullet.tscn" id="1_picf4"]
+[ext_resource type="Script" uid="uid://b4j6nx1s641bm" path="res://Patterns/circular rain.gd" id="2_x7w3f"]
+
+[resource]
+script = ExtResource("2_x7w3f")
+bullet_scene = ExtResource("1_picf4")
+metadata/_custom_type_script = "uid://b4j6nx1s641bm"

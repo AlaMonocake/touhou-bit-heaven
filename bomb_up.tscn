@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://1liontglsfxj"]
+
+[ext_resource type="PackedScene" uid="uid://bkrojxe3d7u8r" path="res://pickup_item.tscn" id="1_6defl"]
+[ext_resource type="Texture2D" uid="uid://b1phpyvxb1pu1" path="res://UI/bombItem.png" id="2_cu1uq"]
+
+[node name="PickupItem" unique_id=317732125 instance=ExtResource("1_6defl")]
+pickup_type = 1
+icon = ExtResource("2_cu1uq")

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b6pc8k0fx8pr"]
+
+[ext_resource type="PackedScene" uid="uid://dq3jakopu523b" path="res://birdW.tscn" id="1_vobq3"]
+[ext_resource type="Texture2D" uid="uid://gspaa8n2no1c" path="res://Enemies/bat.png" id="2_tofr1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vobq3"]
+atlas = ExtResource("2_tofr1")
+region = Rect2(0, 21, 206, 87)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tubu"]
+atlas = ExtResource("2_tofr1")
+region = Rect2(0, 108, 206, 87)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyip3"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_vobq3")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_1tubu")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tofr1"]
+height = 66.0
+
+[node name="Bat" unique_id=265608222 instance=ExtResource("1_vobq3")]
+max_hp = 2
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=888231680]
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_yyip3")
+frame = 1
+frame_progress = 0.01366107
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=728842113]
+position = Vector2(0, 5)
+rotation = 1.5707964
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_tofr1")

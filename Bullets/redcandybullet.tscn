@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bt5n08kponj7i"]
+
+[ext_resource type="PackedScene" uid="uid://cp5qofd48xplh" path="res://Bullets/EnemyBullets.tscn" id="1_a6iv7"]
+[ext_resource type="Texture2D" uid="uid://ckt3ckyfyv22u" path="res://Bullets/candybulletr.png" id="2_6xcoq"]
+
+[node name="Node2D" unique_id=312417383 instance=ExtResource("1_a6iv7")]
+bullet_texture = ExtResource("2_6xcoq")

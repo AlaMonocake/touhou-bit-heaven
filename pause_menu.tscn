@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://qnt6jbo586gw"]
+
+[ext_resource type="Texture2D" uid="uid://b41d5iy7tvoix" path="res://Backgrounds/pause_fog.png" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://ddead2wf54024" path="res://pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="Texture2D" uid="uid://cpv05nm8yagfh" path="res://Buttons/resume button.png" id="3_d3xb4"]
+[ext_resource type="Texture2D" uid="uid://1s12ddri88dj" path="res://Buttons/resume selected.png" id="4_mxa3g"]
+[ext_resource type="Texture2D" uid="uid://bgvphr25y3e5q" path="res://Buttons/retry button.png" id="5_e8sti"]
+[ext_resource type="Texture2D" uid="uid://fuyt52tek05i" path="res://Buttons/retry selected.png" id="6_q2yj1"]
+[ext_resource type="Texture2D" uid="uid://cm7nn3tyiopbj" path="res://Buttons/return_manual.png" id="7_e8sti"]
+[ext_resource type="Texture2D" uid="uid://dysrd4vd103gk" path="res://Buttons/return_manual_selected.png" id="8_q2yj1"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=672292359]
+process_mode = 2
+script = ExtResource("1_nwcfo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1443382244]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hdmo1")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1635545603]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 518.0
+offset_top = 460.0
+offset_right = 309.0791
+offset_bottom = 344.8274
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.87, 0.87)
+
+[node name="Resume" type="TextureButton" parent="VBoxContainer" unique_id=881032184]
+layout_mode = 2
+texture_normal = ExtResource("3_d3xb4")
+texture_pressed = ExtResource("4_mxa3g")
+texture_hover = ExtResource("4_mxa3g")
+
+[node name="RetryLevel" type="TextureButton" parent="VBoxContainer" unique_id=971111913]
+layout_mode = 2
+texture_normal = ExtResource("5_e8sti")
+texture_pressed = ExtResource("6_q2yj1")
+texture_hover = ExtResource("6_q2yj1")
+
+[node name="ReturnToTitle" type="TextureButton" parent="VBoxContainer" unique_id=125037670]
+layout_mode = 2
+texture_normal = ExtResource("7_e8sti")
+texture_pressed = ExtResource("8_q2yj1")
+texture_hover = ExtResource("8_q2yj1")

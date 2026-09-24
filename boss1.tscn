@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://1ihh2y0na1on"]
+
+[ext_resource type="Texture2D" uid="uid://crbfuknhvyxxf" path="res://Sprites/boss1sprites.png" id="2_1cox3"]
+[ext_resource type="Script" uid="uid://dctmuseisufdq" path="res://boss_1.gd" id="2_ieihv"]
+[ext_resource type="Script" uid="uid://bo28rorsqbkwb" path="res://Scripts/bossPhase.gd" id="3_0wh14"]
+[ext_resource type="Resource" uid="uid://vt42nm60t33g" path="res://Scripts/boss1phases.tres" id="3_7vm6n"]
+[ext_resource type="PackedScene" uid="uid://dr81v424qqdby" path="res://UI/life_up.tscn" id="4_ieihv"]
+[ext_resource type="Script" uid="uid://bvax7qte3rajr" path="res://MovementController.gd" id="10_2s8eg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wh14"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(0, 0, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vm6n"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(97, 0, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwncw"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(194, 0, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpsue"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(291, 0, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmc3d"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(0, 128, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeprl"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(97, 128, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s8eg"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(194, 128, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u646"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(291, 128, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5nwr"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(0, 256, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdppp"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(97, 256, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv3xe"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(194, 256, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj572"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(291, 256, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7i64c"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(0, 384, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgki8"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(97, 384, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqtc7"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(194, 384, 97, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq44w"]
+atlas = ExtResource("2_1cox3")
+region = Rect2(291, 384, 97, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqrnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wh14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vm6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwncw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpsue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmc3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeprl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s8eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u646")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5nwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdppp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv3xe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj572")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7i64c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgki8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqtc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq44w")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wpsue"]
+radius = 20.0
+height = 119.35
+
+[node name="Boss" type="CharacterBody2D" unique_id=265608222 groups=["boss", "enemy"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("2_ieihv")
+phases = Array[ExtResource("3_0wh14")]([ExtResource("3_7vm6n")])
+life_pickup_scene = ExtResource("4_ieihv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=888231680]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qqrnn")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=728842113]
+light_mask = 2
+visibility_layer = 5
+position = Vector2(3.88, -7.785)
+scale = Vector2(1.03, 1.03)
+shape = SubResource("CapsuleShape2D_wpsue")
+
+[node name="PatternController" type="Node" parent="." unique_id=120020164]
+
+[node name="MovementController" type="Node" parent="." unique_id=921150416]
+script = ExtResource("10_2s8eg")

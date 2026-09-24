@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ch3rh1k86lcid"]
+
+[ext_resource type="Script" uid="uid://dme2p3ab5iqq5" path="res://UI/bombs_ui.gd" id="1_nuy57"]
+[ext_resource type="Texture2D" uid="uid://ce8vlj4awaaw5" path="res://UI/bomb_full.png" id="2_6pkh2"]
+[ext_resource type="Texture2D" uid="uid://c1phcx4thvt12" path="res://UI/bomb_empty.png" id="3_mroc8"]
+
+[node name="BombsUI" type="HBoxContainer" unique_id=962633235]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_nuy57")
+bomb_full = ExtResource("2_6pkh2")
+bomb_empty = ExtResource("3_mroc8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=410712571]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1288757165]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=721923225]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1360826169]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1565307631]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="." unique_id=57178291]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect7" type="TextureRect" parent="." unique_id=202694087]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3
+
+[node name="TextureRect8" type="TextureRect" parent="." unique_id=782315414]
+layout_mode = 2
+texture = ExtResource("3_mroc8")
+expand_mode = 3

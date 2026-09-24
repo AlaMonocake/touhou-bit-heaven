@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cvwlpwqus7vba"]
+
+[ext_resource type="Script" uid="uid://brnvvngkpsfq" path="res://ghost_boss.gd" id="1_o5oru"]
+[ext_resource type="PackedScene" uid="uid://cp5qofd48xplh" path="res://Bullets/EnemyBullets.tscn" id="2_68bn1"]
+[ext_resource type="Texture2D" uid="uid://dvlg0hvx81y44" path="res://Enemies/ghost.png" id="2_vde0f"]
+[ext_resource type="PackedScene" uid="uid://1liontglsfxj" path="res://bomb_up.tscn" id="3_0442p"]
+[ext_resource type="Script" uid="uid://bdk11jwhjwbwe" path="res://Scripts/pattern_controller.gd" id="4_fdwis"]
+[ext_resource type="Script" uid="uid://mbha6o58ssoh" path="res://Scripts/bullet_pattern.gd" id="5_1aga0"]
+[ext_resource type="Resource" uid="uid://344f17sd677a" path="res://Patterns/spread_shot.tres" id="6_fdwis"]
+[ext_resource type="Script" uid="uid://bvax7qte3rajr" path="res://MovementController.gd" id="7_1aga0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_du1bf"]
+radius = 30.0
+height = 100.0
+
+[node name="GhostBoss" type="CharacterBody2D" unique_id=528758537]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_o5oru")
+bullet_scene = ExtResource("2_68bn1")
+bomb_pickup_scene = ExtResource("3_0442p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1917358100]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vde0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1152916107]
+position = Vector2(-5.07, 0)
+shape = SubResource("CapsuleShape2D_du1bf")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=39478460]
+
+[node name="PhaseTimer" type="Timer" parent="." unique_id=2087251350]
+
+[node name="PatternController" type="Node" parent="." unique_id=1491186563]
+script = ExtResource("4_fdwis")
+patterns = Array[ExtResource("5_1aga0")]([ExtResource("6_fdwis")])
+
+[node name="MovementController" type="Node" parent="." unique_id=1201212487]
+script = ExtResource("7_1aga0")

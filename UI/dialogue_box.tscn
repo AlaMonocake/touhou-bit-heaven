@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cds2ufa4iluph"]
+
+[ext_resource type="Script" uid="uid://c3aopnb65ns8t" path="res://UI/dialogue_box.gd" id="1_senjy"]
+[ext_resource type="Texture2D" uid="uid://b037mheqo1n1k" path="res://Portraits/mc_por1.png" id="2_0nste"]
+[ext_resource type="Texture2D" uid="uid://bewe30kq0o6l6" path="res://Portraits/boss1_port1.png" id="3_if77y"]
+[ext_resource type="FontFile" uid="uid://b1y6d2jigtaib" path="res://Fonts/OpenDyslexic-Regular.otf" id="4_f8uj4"]
+[ext_resource type="FontFile" uid="uid://2ujatwfhfewc" path="res://Fonts/OpenDyslexic-Italic.otf" id="4_i05h3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b8rgn"]
+font = ExtResource("4_i05h3")
+font_size = 17
+
+[sub_resource type="LabelSettings" id="LabelSettings_i05h3"]
+line_spacing = -4.5
+font = ExtResource("4_f8uj4")
+font_size = 11
+font_color = Color(1, 1, 0.92156863, 1)
+outline_size = 1
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=1926669242]
+script = ExtResource("1_senjy")
+
+[node name="Panel" type="Panel" parent="." unique_id=135643615]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = 200.0
+offset_right = 425.0
+offset_bottom = 300.0
+grow_vertical = 2
+
+[node name="PortraitRight" type="TextureRect" parent="Panel" unique_id=1001112332]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -200.0
+offset_right = 62.00003
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_if77y")
+expand_mode = 4
+
+[node name="PortraitLeft" type="TextureRect" parent="Panel" unique_id=38501681]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -55.0
+offset_top = -199.155
+offset_right = 45.0
+offset_bottom = 0.8450012
+grow_vertical = 0
+texture = ExtResource("2_0nste")
+expand_mode = 5
+
+[node name="NameLabel" type="Label" parent="Panel" unique_id=1934988541]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_top = -5.0
+offset_right = 23.000061
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Lecia"
+label_settings = SubResource("LabelSettings_b8rgn")
+
+[node name="TextLabel" type="Label" parent="Panel" unique_id=2084802817]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -37.0
+offset_right = -1.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "If you see this you probably forgot to set the dialogue in main"
+label_settings = SubResource("LabelSettings_i05h3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bynxin8r8make"]
+
+[ext_resource type="Script" uid="uid://b4q6lua7sbmuh" path="res://point_item.gd" id="1_k8yya"]
+[ext_resource type="Texture2D" uid="uid://dd55geb4u06n4" path="res://UI/point.png" id="2_4uklj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8yya"]
+
+[node name="PointItem" type="Area2D" unique_id=383451979]
+collision_layer = 16
+script = ExtResource("1_k8yya")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=246753030]
+texture = ExtResource("2_4uklj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471154333]
+shape = SubResource("RectangleShape2D_k8yya")

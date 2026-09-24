@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="StageData" format=3 uid="uid://b4cjdv0ogikjy"]
+
+[ext_resource type="Script" uid="uid://dyjivru4im68r" path="res://Scripts/StageData.gd" id="1_475gb"]
+[ext_resource type="Script" uid="uid://d0nm55npai7nw" path="res://Scripts/WaveData.gd" id="2_drmjt"]
+[ext_resource type="Script" uid="uid://8qxmw5srxc7a" path="res://Scripts/MovementPattern.gd" id="4_cjiip"]
+[ext_resource type="Script" uid="uid://g7eu1j3n1tle" path="res://Scripts/movement_patterns/straightDown.gd" id="5_3ei3l"]
+[ext_resource type="Script" uid="uid://bx1ypye08tr8w" path="res://Scripts/movement_patterns/wait.gd" id="6_37am8"]
+[ext_resource type="Script" uid="uid://bhvwnc486w270" path="res://Patterns/radial_burst.gd" id="7_3ei3l"]
+[ext_resource type="PackedScene" uid="uid://c6mslhora6qiy" path="res://Bullets/dropletbullet.tscn" id="8_37am8"]
+[ext_resource type="PackedScene" uid="uid://1ihh2y0na1on" path="res://boss1.tscn" id="10_e52gn"]
+[ext_resource type="Script" uid="uid://b3kflgoorr5da" path="res://Scripts/movement_patterns/wavey.gd" id="10_uvr1y"]
+
+[sub_resource type="Resource" id="Resource_ohmt5"]
+script = ExtResource("5_3ei3l")
+duration = 0.5
+metadata/_custom_type_script = "uid://g7eu1j3n1tle"
+
+[sub_resource type="Resource" id="Resource_px6q7"]
+script = ExtResource("6_37am8")
+duration = 5.0
+metadata/_custom_type_script = "uid://bx1ypye08tr8w"
+
+[sub_resource type="Resource" id="Resource_uvr1y"]
+script = ExtResource("10_uvr1y")
+duration = 2.0
+metadata/_custom_type_script = "uid://b3kflgoorr5da"
+
+[sub_resource type="Resource" id="Resource_37am8"]
+script = ExtResource("7_3ei3l")
+bullet_scene = ExtResource("8_37am8")
+metadata/_custom_type_script = "uid://bhvwnc486w270"
+
+[sub_resource type="Resource" id="Resource_e52gn"]
+script = ExtResource("2_drmjt")
+count = 1
+spacing = 0.0
+time = 0.5
+enemy_scene = ExtResource("10_e52gn")
+position = Vector2(500, 10)
+pattern = SubResource("Resource_37am8")
+movements = Array[ExtResource("4_cjiip")]([SubResource("Resource_ohmt5"), SubResource("Resource_px6q7"), SubResource("Resource_uvr1y")])
+metadata/_custom_type_script = "uid://d0nm55npai7nw"
+
+[resource]
+script = ExtResource("1_475gb")
+waves = Array[ExtResource("2_drmjt")]([SubResource("Resource_e52gn")])
+metadata/_custom_type_script = "uid://dyjivru4im68r"

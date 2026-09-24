@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpreadShot" format=3 uid="uid://344f17sd677a"]
+
+[ext_resource type="PackedScene" uid="uid://e7y6eq3gmgwi" path="res://Bullets/longpurpleenemybullet.tscn" id="1_ah4h3"]
+[ext_resource type="Script" uid="uid://cuq0cwxkcjive" path="res://Patterns/spread_shot.gd" id="1_wwmei"]
+
+[resource]
+script = ExtResource("1_wwmei")
+bullet_scene = ExtResource("1_ah4h3")
+bullet_count = 4
+speed = 400.0
+cooldown = 2.0
+metadata/_custom_type_script = "uid://cuq0cwxkcjive"

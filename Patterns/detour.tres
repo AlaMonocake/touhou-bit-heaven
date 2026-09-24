@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SnakeDetourShot" format=3 uid="uid://cd8f4355mfp61"]
+
+[ext_resource type="PackedScene" uid="uid://c3bpn0iw7wada" path="res://Bullets/redbullet.tscn" id="1_cp3n1"]
+[ext_resource type="Script" uid="uid://ieg7xrsnx406" path="res://Patterns/detour.gd" id="1_wubgo"]
+
+[resource]
+script = ExtResource("1_wubgo")
+bullet_scene = ExtResource("1_cp3n1")
+metadata/_custom_type_script = "uid://ieg7xrsnx406"

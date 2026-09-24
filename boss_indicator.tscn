@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://comjll24lfb8q"]
+
+[ext_resource type="Script" uid="uid://cnikrp7vktrjd" path="res://boss_indicator.gd" id="1_17ynr"]
+[ext_resource type="Texture2D" uid="uid://bf5ion2j1l54a" path="res://Sprites/MARKER.png" id="2_qy1ma"]
+
+[node name="BossIndicator" type="Control" unique_id=875114847]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_17ynr")
+playfield_offset_x = 470.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1083411068]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("2_qy1ma")
+expand_mode = 1

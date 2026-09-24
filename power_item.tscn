@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://i5ythcd10ndx"]
+
+[ext_resource type="Script" uid="uid://cwgylagjrs21x" path="res://power_item.gd" id="1_hnyr5"]
+[ext_resource type="Texture2D" uid="uid://bsmjwh0he2xwi" path="res://UI/power.png" id="2_b28qy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnyr5"]
+
+[node name="PowerItem" type="Area2D" unique_id=383451979 groups=["item"]]
+collision_layer = 16
+script = ExtResource("1_hnyr5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=246753030]
+texture = ExtResource("2_b28qy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471154333]
+shape = SubResource("RectangleShape2D_hnyr5")

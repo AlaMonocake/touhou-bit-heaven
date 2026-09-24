@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MoveSine" format=3 uid="uid://cy2iq8alb46hq"]
+
+[ext_resource type="Script" uid="uid://b3kflgoorr5da" path="res://Scripts/movement_patterns/wavey.gd" id="1_fyq7g"]
+
+[resource]
+script = ExtResource("1_fyq7g")
+metadata/_custom_type_script = "uid://b3kflgoorr5da"

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bqag4f55fm078"]
+
+[ext_resource type="Script" uid="uid://clnyqw340av7r" path="res://power_ui.gd" id="1_mvtaw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mvtaw"]
+font_size = 30
+
+[node name="PowerUI" type="Control" unique_id=1334410219]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mvtaw")
+
+[node name="PowerBar" type="TextureProgressBar" parent="." unique_id=1120762232]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 1000.0
+value = 1.0
+
+[node name="PhaseLabel" type="Label" parent="." unique_id=1525957732]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "POWER: 0.1"
+label_settings = SubResource("LabelSettings_mvtaw")

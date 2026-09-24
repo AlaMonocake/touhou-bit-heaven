@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bsv1ni208pfii"]
+
+[ext_resource type="PackedScene" uid="uid://dlkfkx3v0slu3" path="res://base_enemy.tscn" id="1_f42hk"]
+[ext_resource type="Texture2D" uid="uid://dobclld1vmbmc" path="res://Enemies/pump.png" id="2_i4gw2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pq60l"]
+
+[node name="CharacterBody2D" unique_id=109735299 instance=ExtResource("1_f42hk")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1433358554]
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("2_i4gw2")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1918999772]
+scale = Vector2(2.605, 2.605)
+shape = SubResource("CircleShape2D_pq60l")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RadialBurst" format=3 uid="uid://bmtol34ixew07"]
+
+[ext_resource type="PackedScene" uid="uid://bw40jkebn73vy" path="res://Bullets/darkpinkenemybullet.tscn" id="1_ck044"]
+[ext_resource type="Script" uid="uid://bhvwnc486w270" path="res://Patterns/radial_burst.gd" id="1_tovwv"]
+
+[resource]
+script = ExtResource("1_tovwv")
+bullet_scene = ExtResource("1_ck044")
+bullet_count = 3
+speed = 100.0
+metadata/_custom_type_script = "uid://bhvwnc486w270"

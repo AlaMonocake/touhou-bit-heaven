@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://g0hamtqc55b7"]
+
+[ext_resource type="Script" uid="uid://slkomgd7jqwp" path="res://UI/bomb_name.gd" id="2_i7t33"]
+[ext_resource type="Script" uid="uid://bri2a6yowo1r8" path="res://UI/bomb_portrait.gd" id="2_q1geo"]
+[ext_resource type="Texture2D" uid="uid://b037mheqo1n1k" path="res://Portraits/mc_por1.png" id="2_uiyvc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i7t33"]
+font_size = 18
+outline_size = 3
+outline_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[node name="PlayerSpellUI" type="Control" unique_id=1244141978]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1600.0
+offset_bottom = -900.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BombPortrait" type="TextureRect" parent="." unique_id=172058985]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_uiyvc")
+script = ExtResource("2_q1geo")
+
+[node name="BombName" type="Label" parent="." unique_id=1207399413]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 297.0
+offset_right = 193.0
+offset_bottom = 322.0
+text = "YEAH BABY LET'S GO BOMB BOMB"
+label_settings = SubResource("LabelSettings_i7t33")
+script = ExtResource("2_i7t33")

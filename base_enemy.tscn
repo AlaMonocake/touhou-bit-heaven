@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dlkfkx3v0slu3"]
+
+[ext_resource type="Script" uid="uid://wtyecj2oq6a0" path="res://Scripts/base_enemy.gd" id="1_ud51s"]
+[ext_resource type="Script" uid="uid://bdk11jwhjwbwe" path="res://Scripts/pattern_controller.gd" id="2_yo2aj"]
+[ext_resource type="Script" uid="uid://mbha6o58ssoh" path="res://Scripts/bullet_pattern.gd" id="3_m4cmf"]
+[ext_resource type="Resource" uid="uid://344f17sd677a" path="res://Patterns/spread_shot.tres" id="4_pcbxe"]
+[ext_resource type="Script" uid="uid://bvax7qte3rajr" path="res://MovementController.gd" id="5_t4uyu"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=109735299]
+script = ExtResource("1_ud51s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1433358554]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1918999772]
+
+[node name="PatternController" type="Node" parent="." unique_id=2010373576]
+script = ExtResource("2_yo2aj")
+patterns = Array[ExtResource("3_m4cmf")]([ExtResource("4_pcbxe")])
+
+[node name="MovementController" type="Node" parent="." unique_id=792941710]
+script = ExtResource("5_t4uyu")

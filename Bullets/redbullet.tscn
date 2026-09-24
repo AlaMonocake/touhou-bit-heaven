@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3bpn0iw7wada"]
+
+[ext_resource type="Script" uid="uid://dle3sk7odb8fb" path="res://Scripts/enemy_bullet.gd" id="1_rsq74"]
+[ext_resource type="Texture2D" uid="uid://co5frwwkbc0uu" path="res://Bullets/boss1bullet3.png" id="2_dm6n1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rsq74"]
+
+[node name="Area2D" type="Area2D" unique_id=674128040 groups=["enemy_bullet"]]
+collision_layer = 8
+script = ExtResource("1_rsq74")
+
+[node name="enemy_bullet" type="CharacterBody2D" parent="." unique_id=943932604 groups=["enemy_bullet"]]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_bullet" unique_id=1718463542]
+shape = SubResource("CircleShape2D_rsq74")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy_bullet" unique_id=939160313]
+texture = ExtResource("2_dm6n1")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

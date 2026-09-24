@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://sic6w0gyrqnm"]
+
+[ext_resource type="Script" uid="uid://busxmtw6jok10" path="res://Scripts/stage_0.gd" id="1_j3nj4"]
+[ext_resource type="Texture2D" uid="uid://bmis542fl3na2" path="res://Backgrounds/sky.png" id="3_g78pl"]
+[ext_resource type="Resource" uid="uid://dve8exalngqxe" path="res://stage0enemies.tres" id="5_oxmnm"]
+[ext_resource type="Script" uid="uid://chvxm3j5dcbw6" path="res://Scripts/wave_manager.gd" id="7_m0lpx"]
+
+[node name="Stage1" type="Node2D" unique_id=207008454]
+script = ExtResource("1_j3nj4")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1463235302]
+texture = ExtResource("3_g78pl")
+centered = false
+
+[node name="WaveManager" type="Node" parent="." unique_id=837016249]
+script = ExtResource("7_m0lpx")
+stage_data = ExtResource("5_oxmnm")
